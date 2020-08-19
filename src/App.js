@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
+import { ContactsList } from './screens';
 
 function App() {
   return (
-    <div>
+    <div className="app">
+      <ContactsList />
     </div>
   );
 }

@@ -1,0 +1,8 @@
+.contact-list-item {
+  border-bottom: grey thin solid;
+  line-height: 4em;
+}
+
+.contact-list-item span {
+  padding: 10px;
+}
