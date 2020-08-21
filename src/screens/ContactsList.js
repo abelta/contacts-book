@@ -12,10 +12,7 @@ const ContactsList = () => {
     fetchMore,
   } = useInfiniteQuery(
     'contacts',
-    async (_, page) => {
-      const { data } = await listContacts({ page });
-      return data;
-    },
+    async (_, page) =>  await listContacts({ page }),
     { getFetchMore: data => data.page + 1 },
   );
 

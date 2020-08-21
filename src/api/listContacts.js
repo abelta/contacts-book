@@ -1,4 +1,4 @@
-export default async ({ page = 0 } = {}) => {
-  const data = await fetch(`/contacts?page=${page}`);
-  return { data: data.json() };
-};
+export default ({ page = 0 } = {}) => (
+  fetch(`/contacts?page=${page}`)
+  .then(res => res.json())
+);
