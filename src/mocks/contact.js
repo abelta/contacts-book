@@ -1,7 +1,7 @@
 import faker from 'faker';
 
 const contact = ({ id } = {}) => ({
-  id: id || faker.random.number(),
+  id: id === undefined ? faker.random.number() : id,
   name: faker.fake("{{name.firstName}} {{name.lastName}}"),
   country: {
     name: faker.address.country(),
@@ -15,7 +15,7 @@ const contact = ({ id } = {}) => ({
 
 const contacts = ({ page }) => ({
   page,
-  contacts: Array.from(Array(20), () => contact()),
+  contacts: Array.from([...Array(20).keys()], elem => contact({ id: page * 20 + elem })),
 });
 
 export default contact;

@@ -5,3 +5,9 @@
   color: red;
   padding: 10px;
 }
+
+.contacts-list__page-count {
+  color: hotpink;
+  position: fixed;
+  top: 10px;
+}

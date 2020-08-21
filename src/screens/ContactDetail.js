@@ -6,7 +6,7 @@ import { ContactCard } from '../components';
 
 export default () => {
   const { params: { id } } = useRouteMatch();
-  const { data: contact } = useQuery('contact', async() => await getContact({ id }));
+  const { data: contact } = useQuery(['contact', id], async() => await getContact({ id }));
 
   return (
     <div className="contact-detail">
