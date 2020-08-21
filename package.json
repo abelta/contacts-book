@@ -7,10 +7,12 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "faker": "^4.1.0",
-    "msw": "^0.20.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-infinite-scroll-component": "^5.0.5",
+    "react-query": "^2.5.14",
+    "react-query-devtools": "^2.4.3",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {

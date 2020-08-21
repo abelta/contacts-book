@@ -1,7 +1,7 @@
 import faker from 'faker';
 
-const contact = () => ({
-  id: faker.random.number(),
+const contact = ({ id } = {}) => ({
+  id: id || faker.random.number(),
   name: faker.fake("{{name.firstName}} {{name.lastName}}"),
   country: {
     name: faker.address.country(),
