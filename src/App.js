@@ -1,12 +1,15 @@
 import React from 'react';
 import { ReactQueryDevtools } from 'react-query-devtools';
+import { ReactQueryConfigProvider } from 'react-query';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
 import { ContactsList, ContactDetail } from './screens';
+import reactQueryConfig from './reactQueryConfig.json';
+import './App.css';
 
 function App() {
   return (
     <>
+      <ReactQueryConfigProvider config={reactQueryConfig}>
       <Router>
         <div className="app">
           <Switch>
@@ -19,6 +22,7 @@ function App() {
           </Switch>
         </div>
       </Router>
+      </ ReactQueryConfigProvider>
       <ReactQueryDevtools initialIsOpen />
     </>
   );

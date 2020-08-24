@@ -1,0 +1,6 @@
+{
+  "queries": {
+    "refetchOnWindowFocus": false,
+    "staleTime": 180000
+  }
+}
