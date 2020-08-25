@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useInfiniteQuery } from 'react-query';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import { motion } from 'framer-motion';
 import { listContacts } from '../api';
 import { ContactListItem } from '../components';
 import './ContactsList.css';
@@ -17,7 +18,13 @@ const ContactsList = () => {
   );
 
   return (
-    <div className="contacts-list">
+    <motion.div
+      className="contacts-list"
+      initial={{ x: '-300px' }}
+      animate={{ x: '0' }}
+      exit={{ x: '-300px' }}
+      transition={{ ease: "easeOut", duration: 0.2 }}
+    >
       <h2 className="contacts-list__title">CONTACT LIST</h2>
       <h3 className="contacts-list__page-count">{currentPage}</h3>
       <InfiniteScroll
@@ -41,7 +48,7 @@ const ContactsList = () => {
         ))
       }
       </InfiniteScroll>
-    </div>
+    </motion.div>
   );
 };
 

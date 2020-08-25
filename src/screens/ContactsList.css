@@ -1,4 +1,9 @@
 .contacts-list {
+  background-color: pink;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
 }
 
 .contacts-list__title {
