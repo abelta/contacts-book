@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { listContacts } from '../api';
 import { ContactListItem } from '../components';
 import {
+  CountProvider,
   useCount,
   setCount as saveScrollY,
 } from '../contexts/CountContext';
@@ -33,6 +34,7 @@ const ContactsList = () => {
       exit={{ x: '-300px' }}
       transition={{ ease: "easeOut", duration: 0.2 }}
     >
+      <CountProvider>
       <h2 className="contacts-list__title">CONTACT LIST</h2>
       <InfiniteScroll
         ref={scroll}
@@ -55,6 +57,7 @@ const ContactsList = () => {
         ))
       }
       </InfiniteScroll>
+      </CountProvider>
     </motion.div>
   );
 };

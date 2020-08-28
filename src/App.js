@@ -12,10 +12,10 @@ export default () => {
   return (
     <div className="app">
       <ReactQueryConfigProvider config={reactQueryConfig}>
-        <CountProvider>
-          <Router>
-            <Route render={({ location }) => (
-              <AnimatePresence initial={false}>
+        <Router>
+          <Route render={({ location }) => (
+            <AnimatePresence initial={false}>
+              <CountProvider>
                 <Switch
                   location={location}
                   key={location.pathname}
@@ -23,11 +23,11 @@ export default () => {
                   <Route exact path="/" component={ContactsList} />
                   <Route path="/contact/:id" component={ContactDetail} />
                 </Switch>
-              </AnimatePresence>
-            )}
-            />
-          </Router>
-        </CountProvider>
+              </CountProvider>
+            </AnimatePresence>
+          )}
+          />
+        </Router>
       </ReactQueryConfigProvider>
       <ReactQueryDevtools initialIsOpen />
     </div>
