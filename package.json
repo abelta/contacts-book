@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "faker": "^4.1.0",
     "framer-motion": "^2.4.3-beta.2",
+    "msw": "^0.20.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-infinite-scroll-component": "^5.0.5",
